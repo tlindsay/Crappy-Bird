@@ -1,0 +1,29 @@
+body {
+	font-family: sans-serif;
+	text-align: center;
+}
+
+a {
+	color:black;
+}
+
+a:visited {
+	color:darkgrey;
+}
+
+#crappy-bird {
+	display:block;
+	margin:2em auto;
+	border: 1px solid black;
+}
+
+code {
+	border: 1px solid black;
+	padding: 3px;
+}
+
+#footer {
+	position:relative;
+	bottom:5px;
+	font-size:.7em;
+}
