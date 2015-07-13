@@ -42,12 +42,12 @@
 				return b.center.x > 0;
 			});
 
-			if(Math.random() >= .975){
+			if(Math.random() >= 0.975){
 				var pipe = new Pipe(this, Math.random() * 250);
 				this.addBody(pipe);
 			}
 
-			for(body in this.bodies) {
+			for(var body in this.bodies) {
 				if(!colliding(this.bodies[0], this.bodies[body]))
 					this.bodies[body].update();
 				else
@@ -58,7 +58,7 @@
 		draw : function(screen, gameSize) {
 			screen.clearRect(0, 0, gameSize.x, gameSize.y);
 
-			for(body in this.bodies) {
+			for(var body in this.bodies) {
 				drawRect(screen, this.bodies[body]);
 			}
 		},
@@ -71,10 +71,10 @@
 	var Player = function (game, gameSize) {
 		this.game = game;
 		this.size = { x: 15, y: 15 };
-		this.center = { x: gameSize.x / 2, y: gameSize.y / 2 }
+		this.center = { x: gameSize.x / 2, y: gameSize.y / 2 };
 
 		this.keyboarder = new Keyboarder();
-	}
+	};
 
 	Player.prototype = {
 		update : function() {
@@ -96,9 +96,9 @@
 			topOrBottom = this.game.gameSize.y - this.size.y / 2;
 		}
 
-		this.center = { x: this.game.gameSize.x, y: topOrBottom }
+		this.center = { x: this.game.gameSize.x, y: topOrBottom };
 
-	}
+	};
 
 	Pipe.prototype = {
 		update : function() {
